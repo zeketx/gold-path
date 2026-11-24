@@ -106,10 +106,11 @@ h1, h2, h3 {
   margin: 0;
   letter-spacing: -0.025em;
   line-height: 1.1;
+  overflow-wrap: break-word;
 }
 
 h1 {
-  font-size: clamp(2.25rem, 4.2vw, 3.6rem);
+  font-size: clamp(2rem, 4.2vw, 3.6rem);
   font-weight: 700;
 }
 
@@ -461,7 +462,20 @@ p {
 [data-enter].is-entered [data-enter-item]:nth-child(5) { transition-delay: 0.24s; }
 
 /* Hero visual: One-Page Ship / Don't-Ship Report */
+.hero-copy,
+.hero-visual,
+.thesis-statement,
+.diagram-panel,
+.scenario-detail,
+.close-copy,
+.audit-form {
+  min-width: 0;
+}
+
 .report-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   background: var(--surface);
   border: 1.5px solid var(--ink);
   border-radius: var(--radius);
@@ -471,11 +485,17 @@ p {
 
 .report-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--border);
+}
+
+.report-header > div {
+  min-width: 0;
+  flex: 1 1 200px;
 }
 
 .report-kicker {
@@ -492,6 +512,7 @@ p {
   font-size: 0.82rem;
   color: var(--ink-muted);
   margin-top: 4px;
+  overflow-wrap: anywhere;
 }
 
 .verdict {
@@ -542,12 +563,17 @@ p {
 
 .report-row {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
   gap: 16px;
   align-items: center;
   padding: 10px 8px;
   border-bottom: 1px solid var(--border);
   font-size: 0.88rem;
+}
+
+.report-row > span:first-child {
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .report-head {
@@ -1028,16 +1054,16 @@ p {
   .thesis-grid,
   .scenarios-layout,
   .close-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .service-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 16px;
   }
 
   .steps-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .hero,
@@ -1057,7 +1083,7 @@ p {
   }
 
   .hero-facts {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
 
@@ -1067,6 +1093,10 @@ p {
 }
 
 @media (max-width: 480px) {
+  h1 {
+    font-size: clamp(1.75rem, 7vw, 2.15rem);
+  }
+
   .hero-actions .btn,
   .service-cta .btn {
     width: 100%;
@@ -1077,8 +1107,17 @@ p {
   }
 
   .report-row {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     gap: 8px;
+    padding: 9px 4px;
+  }
+
+  .service-row {
+    padding: 24px 16px;
+  }
+
+  .diagram-panel {
+    padding: 12px;
   }
 }
 
