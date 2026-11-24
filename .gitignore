@@ -17,3 +17,6 @@ out/
 .vercel
 .idea/
 .vscode/
+
+# Netlify CLI local link (may contain auth state)
+.netlify/
