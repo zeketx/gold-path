@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en" data-type="service" data-radius="soft" data-buttons="solid" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="page-type" content="service">
+  <meta name="site-kind" content="other">
+  <meta name="theme-color" content="#F7F5F0">
+  <title>Gold Path — Independent QA for AI Voice and Chat Agents</title>
+  <meta name="description" content="Independent QA for companies and AI agencies running AI voice and chat agents. Golden-path test calls, production conversation scoring, and a one-page ship or don't-ship report within 48 hours.">
+  <meta property="og:title" content="Gold Path — Independent QA for AI Voice and Chat Agents">
+  <meta property="og:description" content="Before you change a prompt or swap a model, Gold Path runs your golden-path test calls and sends a one-page ship or don't-ship report within 48 hours.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23141413'/%3E%3Cpath d='M8 22L14 10L19 18L24 10' fill='none' stroke='%23E5B53B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--
+    Kind: service (site-kind: other, technical AI subject)
+    Palette: Warm Alabaster (#F7F5F0), Obsidian (#141413), Burnished Gold (#9A6F00 / #E5B53B)
+    Typography: Space Grotesk (display), Inter (body), JetBrains Mono (report & metrics)
+    Rhythm: light hero -> light thesis/diagram -> dark failure-modes moment -> light services -> light process -> dark close/CTA
+    Dealt moment: scroll-driven word-highlight in #why-independent
+  -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Gold Path home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="6" fill="currentColor"/>
+            <path d="M8 22L14 10L19 18L24 10" stroke="#E5B53B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Gold Path</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#why-independent">Why Independent QA</a>
+        <a href="#scenarios">What We Test</a>
+        <a href="#services">Services</a>
+        <a href="#how-it-works">Process</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm" href="#book-audit">Book a free 20-call audit</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <span class="menu-bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-nav" class="mobile-nav" hidden>
+      <div class="wrap mobile-nav-inner">
+        <a href="#why-independent">Why Independent QA</a>
+        <a href="#scenarios">What We Test</a>
+        <a href="#services">Services</a>
+        <a href="#how-it-works">Process</a>
+        <a class="btn btn-primary" href="#book-audit">Book a free 20-call audit</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- SECTION 1: HERO -->
+    <section id="top" class="hero" data-enter>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-enter-item>Independent QA for AI Voice &amp; Chat Agents</p>
+          <h1 data-enter-item>Independent QA for teams running AI voice and chat agents.</h1>
+          <p class="hero-lead" data-enter-item>
+            Before you change a prompt or swap a model, Gold Path runs your golden-path test calls, scores real production conversations, and sends a one-page ship or don't-ship report within 48 hours.
+          </p>
+
+          <div class="hero-actions" data-enter-item>
+            <a class="btn btn-primary" href="#book-audit">Book a free 20-call audit</a>
+            <a class="btn btn-secondary" href="#services">View services and pricing</a>
+          </div>
+
+          <dl class="hero-facts" data-enter-item>
+            <div>
+              <dt>Turnaround</dt>
+              <dd>48-hour verdict</dd>
+            </div>
+            <div>
+              <dt>Stacks</dt>
+              <dd>Vapi, Retell, Bland, LiveKit, in-house</dd>
+            </div>
+            <div>
+              <dt>Deliverable</dt>
+              <dd>One-page ship / don't-ship report</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" data-enter-item>
+          <div class="report-card" role="region" aria-label="Example one-page ship or don't-ship report">
+            <div class="report-header">
+              <div>
+                <span class="report-kicker">GOLD PATH — SHIP CHECK REPORT</span>
+                <div class="report-meta">Candidate: prompt-v14.2 &rarr; gpt-4o-realtime</div>
+              </div>
+              <span class="verdict verdict-hold">DON'T SHIP</span>
+            </div>
+
+            <div class="report-summary-bar">
+              <div class="summary-stat">
+                <span class="stat-label">Calls run</span>
+                <span class="stat-val">20 / 20</span>
+              </div>
+              <div class="summary-stat">
+                <span class="stat-label">Passed</span>
+                <span class="stat-val">18</span>
+              </div>
+              <div class="summary-stat">
+                <span class="stat-label">Regressions</span>
+                <span class="stat-val stat-fail">2 critical</span>
+              </div>
+              <div class="summary-stat">
+                <span class="stat-label">Delivered</span>
+                <span class="stat-val">34h</span>
+              </div>
+            </div>
+
+            <div class="report-table" role="table" aria-label="Test call suite results">
+              <div class="report-row report-head" role="row">
+                <span role="columnheader">Scenario</span>
+                <span role="columnheader">Calls</span>
+                <span role="columnheader">Result</span>
+              </div>
+              <div class="report-row" role="row">
+                <span role="cell">Happy path booking &amp; handoff</span>
+                <span role="cell" class="mono">6 / 6</span>
+                <span role="cell"><span class="pill pill-pass">PASS</span></span>
+              </div>
+              <div class="report-row" role="row">
+                <span role="cell">Angry caller &amp; de-escalation</span>
+                <span role="cell" class="mono">4 / 4</span>
+                <span role="cell"><span class="pill pill-pass">PASS</span></span>
+              </div>
+              <div class="report-row report-row-fail" role="row">
+                <span role="cell">Mid-call date &amp; party change</span>
+                <span role="cell" class="mono">3 / 4</span>
+                <span role="cell"><span class="pill pill-fail">FAIL</span></span>
+              </div>
+              <div class="report-row" role="row">
+                <span role="cell">Off-limits refund request</span>
+                <span role="cell" class="mono">3 / 3</span>
+                <span role="cell"><span class="pill pill-pass">PASS</span></span>
+              </div>
+              <div class="report-row report-row-fail" role="row">
+                <span role="cell">Prompt-injection attempt</span>
+                <span role="cell" class="mono">2 / 3</span>
+                <span role="cell"><span class="pill pill-fail">FAIL</span></span>
+              </div>
+            </div>
+
+            <div class="report-blocker">
+              <span class="blocker-tag">BLOCKER #1</span>
+              <p>On call #14, agent confirmed the old time slot after a mid-call reschedule. Roll back tool-call confirmation rule before deploying.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: WHY INDEPENDENT QA (DEALT MOMENT: WORD HIGHLIGHT + HUB DIAGRAM) -->
+    <section id="why-independent" class="section section-light">
+      <div class="wrap">
+        <div class="section-header">
+          <p class="eyebrow">The Independent Grader</p>
+          <h2>The platform that sells your agent shouldn't grade its own homework.</h2>
+        </div>
+
+        <div class="thesis-grid">
+          <div class="thesis-statement">
+            <p class="word-highlight" data-word-highlight>
+              A small prompt tweak or model swap rarely crashes your agent outright. It breaks quietly: skipping a confirmation, bending a refund policy, or leaking instructions under pressure. Gold Path sits outside your agent vendor so every release gets an unconflicted pass or fail before callers find the bug.
+            </p>
+            <div class="stack-list">
+              <span class="stack-label">Works with any stack</span>
+              <ul class="stack-pills" aria-label="Supported agent platforms">
+                <li>Vapi</li>
+                <li>Retell</li>
+                <li>Bland</li>
+                <li>LiveKit</li>
+                <li>In-house</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="diagram-panel" aria-label="Independent QA workflow diagram">
+            <svg class="qa-diagram" viewBox="0 0 560 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing your agent stack feeding into Gold Path Independent Grader and outputting a 48-hour Ship or Don't-Ship Report">
+              <!-- Left column: Inputs -->
+              <rect x="16" y="28" width="152" height="54" rx="8" fill="#FFFFFF" stroke="#DDD8CC" stroke-width="1.5"/>
+              <text x="32" y="51" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600">Prompt change</text>
+              <text x="32" y="68" fill="#4A4945" font-family="JetBrains Mono, monospace" font-size="10.5">system / tools / rules</text>
+
+              <rect x="16" y="133" width="152" height="54" rx="8" fill="#FFFFFF" stroke="#DDD8CC" stroke-width="1.5"/>
+              <text x="32" y="156" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600">Model swap</text>
+              <text x="32" y="173" fill="#4A4945" font-family="JetBrains Mono, monospace" font-size="10.5">LLM / voice / STT</text>
+
+              <rect x="16" y="238" width="152" height="54" rx="8" fill="#FFFFFF" stroke="#DDD8CC" stroke-width="1.5"/>
+              <text x="32" y="261" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600">Live transcripts</text>
+              <text x="32" y="278" fill="#4A4945" font-family="JetBrains Mono, monospace" font-size="10.5">production calls</text>
+
+              <!-- Connecting lines left to hub -->
+              <path d="M168 55 H204 V160 H224" stroke="#9A6F00" stroke-width="1.5"/>
+              <path d="M168 160 H224" stroke="#9A6F00" stroke-width="1.5"/>
+              <path d="M168 265 H204 V160" stroke="#9A6F00" stroke-width="1.5"/>
+
+              <!-- Center hub: Gold Path -->
+              <rect x="224" y="96" width="144" height="128" rx="10" fill="#141413"/>
+              <rect x="236" y="110" width="8" height="8" rx="2" fill="#E5B53B"/>
+              <text x="252" y="118" fill="#E5B53B" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">GOLD PATH</text>
+              <text x="236" y="148" fill="#F7F5F0" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="600">Independent</text>
+              <text x="236" y="168" fill="#F7F5F0" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="600">Grader</text>
+              <text x="236" y="196" fill="#B8B4A8" font-family="JetBrains Mono, monospace" font-size="10">20–50 scripted calls</text>
+              <text x="236" y="211" fill="#B8B4A8" font-family="JetBrains Mono, monospace" font-size="10">+ production scoring</text>
+
+              <!-- Connecting line hub to right -->
+              <path d="M368 160 H402" stroke="#9A6F00" stroke-width="1.5"/>
+              <polygon points="402,155 412,160 402,165" fill="#9A6F00"/>
+
+              <!-- Right column: Output -->
+              <rect x="412" y="106" width="132" height="108" rx="8" fill="#FFFFFF" stroke="#141413" stroke-width="1.5"/>
+              <text x="426" y="132" fill="#9A6F00" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">48 HOURS</text>
+              <text x="426" y="156" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600">One-page</text>
+              <text x="426" y="174" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600">Ship / Don't-Ship</text>
+              <text x="426" y="196" fill="#4A4945" font-family="JetBrains Mono, monospace" font-size="10">pass / fail + fixes</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: WHAT WE TEST (DARK CONTRASTING BAND) -->
+    <section id="scenarios" class="section section-dark">
+      <div class="wrap">
+        <div class="section-header">
+          <p class="eyebrow eyebrow-gold">The Golden-Path Suite</p>
+          <h2>Five call categories we run before you ship.</h2>
+          <p class="section-lead">Every audit runs 20 to 50 scripted voice or chat conversations across the paths that matter most when real customers call.</p>
+        </div>
+
+        <div class="scenarios-layout">
+          <div class="scenario-list" role="tablist" aria-label="Test call categories">
+            <button class="scenario-btn is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-happy" id="tab-happy" data-scenario="happy">
+              <span class="scenario-num">01</span>
+              <span class="scenario-title">Happy path</span>
+            </button>
+            <button class="scenario-btn" type="button" role="tab" aria-selected="false" aria-controls="panel-angry" id="tab-angry" data-scenario="angry">
+              <span class="scenario-num">02</span>
+              <span class="scenario-title">Angry caller</span>
+            </button>
+            <button class="scenario-btn" type="button" role="tab" aria-selected="false" aria-controls="panel-midcall" id="tab-midcall" data-scenario="midcall">
+              <span class="scenario-num">03</span>
+              <span class="scenario-title">Mid-call changes</span>
+            </button>
+            <button class="scenario-btn" type="button" role="tab" aria-selected="false" aria-controls="panel-offlimits" id="tab-offlimits" data-scenario="offlimits">
+              <span class="scenario-num">04</span>
+              <span class="scenario-title">Off-limits requests</span>
+            </button>
+            <button class="scenario-btn" type="button" role="tab" aria-selected="false" aria-controls="panel-injection" id="tab-injection" data-scenario="injection">
+              <span class="scenario-num">05</span>
+              <span class="scenario-title">Prompt-injection attempts</span>
+            </button>
+          </div>
+
+          <div class="scenario-detail">
+            <div id="panel-happy" class="scenario-panel" role="tabpanel" aria-labelledby="tab-happy">
+              <div class="panel-top">
+                <span class="mono-tag">CATEGORY 01</span>
+                <h3>Happy path</h3>
+              </div>
+              <p>Verifies that your agent completes its core job end-to-end: captures required fields, fires the right tool calls, confirms details accurately, and closes cleanly.</p>
+              <div class="check-box">
+                <span class="check-label">What we grade</span>
+                <ul>
+                  <li>Correct tool parameters and confirmation read-back</li>
+                  <li>No skipped required fields or hallucinated availability</li>
+                  <li>Clean handoff or call termination</li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="panel-angry" class="scenario-panel" role="tabpanel" aria-labelledby="tab-angry" hidden>
+              <div class="panel-top">
+                <span class="mono-tag">CATEGORY 02</span>
+                <h3>Angry caller</h3>
+              </div>
+              <p>Tests interruptions, frustration, and pushback. Checks whether the agent stays composed, follows escalation rules, and avoids defensive or robotic loops.</p>
+              <div class="check-box">
+                <span class="check-label">What we grade</span>
+                <ul>
+                  <li>Graceful handling of barge-in and interruptions</li>
+                  <li>Timely escalation to a human when thresholds are met</li>
+                  <li>Tone consistency without breaking policy</li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="panel-midcall" class="scenario-panel" role="tabpanel" aria-labelledby="tab-midcall" hidden>
+              <div class="panel-top">
+                <span class="mono-tag">CATEGORY 03</span>
+                <h3>Mid-call changes</h3>
+              </div>
+              <p>Callers change dates, swap items, or correct a phone number halfway through. We verify that state updates cleanly and stale values never leak into the final action.</p>
+              <div class="check-box">
+                <span class="check-label">What we grade</span>
+                <ul>
+                  <li>Updated slot values overwrite earlier turns</li>
+                  <li>Tool calls reflect the final agreed state, not the first</li>
+                  <li>Clear re-confirmation before committing</li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="panel-offlimits" class="scenario-panel" role="tabpanel" aria-labelledby="tab-offlimits" hidden>
+              <div class="panel-top">
+                <span class="mono-tag">CATEGORY 04</span>
+                <h3>Off-limits requests</h3>
+              </div>
+              <p>Probes policy boundaries: unauthorized discounts, medical or legal advice, out-of-scope refunds, or competitor questions. The agent must refuse plainly and stay in lane.</p>
+              <div class="check-box">
+                <span class="check-label">What we grade</span>
+                <ul>
+                  <li>Firm refusal without inventing policy exceptions</li>
+                  <li>No unauthorized commitments or credits</li>
+                  <li>Helpful redirect to approved channels</li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="panel-injection" class="scenario-panel" role="tabpanel" aria-labelledby="tab-injection" hidden>
+              <div class="panel-top">
+                <span class="mono-tag">CATEGORY 05</span>
+                <h3>Prompt-injection attempts</h3>
+              </div>
+              <p>Tests adversarial inputs designed to override system instructions, extract hidden prompts, or trigger unintended tool calls over voice or chat.</p>
+              <div class="check-box">
+                <span class="check-label">What we grade</span>
+                <ul>
+                  <li>Zero disclosure of system prompt or internal tool schemas</li>
+                  <li>Resistance to role-override and social-engineering scripts</li>
+                  <li>Safe fallback without leaking customer data</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: SERVICES & PRICING -->
+    <section id="services" class="section section-light">
+      <div class="wrap">
+        <div class="section-header">
+          <p class="eyebrow">Services</p>
+          <h2>Three ways to grade your agent before and after launch.</h2>
+        </div>
+
+        <div class="services-list">
+          <article class="service-row">
+            <div class="service-meta">
+              <span class="service-type">One-time</span>
+              <p class="service-price">$500–$1,500</p>
+            </div>
+            <div class="service-body">
+              <h3>Agent Audit</h3>
+              <p>20–50 scripted calls across happy path, angry caller, mid-call changes, off-limits requests, and prompt-injection attempts. Delivered as a one-page ship or don't-ship report within 48 hours.</p>
+            </div>
+            <div class="service-cta">
+              <a class="btn btn-secondary" href="#book-audit">Start with free 20-call audit</a>
+            </div>
+          </article>
+
+          <article class="service-row service-row-featured">
+            <div class="service-meta">
+              <span class="service-type">Retainer</span>
+              <p class="service-price">$1,500–$2,500<span>/mo</span></p>
+            </div>
+            <div class="service-body">
+              <h3>Ship Check Retainer</h3>
+              <p>We rerun your golden-path suite on every prompt edit or model swap before it reaches production, giving your team a clear ship or don't-ship call within 48 hours.</p>
+            </div>
+            <div class="service-cta">
+              <a class="btn btn-primary" href="#book-audit">Book a free 20-call audit</a>
+            </div>
+          </article>
+
+          <article class="service-row">
+            <div class="service-meta">
+              <span class="service-type">Ongoing</span>
+              <p class="service-price">Weekly cadence</p>
+            </div>
+            <div class="service-body">
+              <h3>Weekly Live-Call Monitoring</h3>
+              <p>We score real production conversations every week and track failure-rate trends, catching silent drift from upstream model updates or changing caller behavior.</p>
+            </div>
+            <div class="service-cta">
+              <a class="btn btn-secondary" href="#book-audit">Ask about monitoring</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: HOW IT WORKS -->
+    <section id="how-it-works" class="section section-stone">
+      <div class="wrap">
+        <div class="section-header">
+          <p class="eyebrow">Process</p>
+          <h2>From prompt change to ship verdict in 48 hours.</h2>
+        </div>
+
+        <ol class="steps-grid">
+          <li class="step-card">
+            <span class="step-num">01</span>
+            <h3>Send your agent &amp; rules</h3>
+            <p>Share your staging phone number or chat endpoint (Vapi, Retell, Bland, LiveKit, or in-house) along with the policies your agent must follow.</p>
+          </li>
+          <li class="step-card">
+            <span class="step-num">02</span>
+            <h3>We run the suite</h3>
+            <p>We execute 20–50 scripted test calls and score real production conversations against your rubric—independent of your agent platform.</p>
+          </li>
+          <li class="step-card">
+            <span class="step-num">03</span>
+            <h3>Get your one-page verdict</h3>
+            <p>Within 48 hours, you receive a one-page ship or don't-ship report listing every pass, every regression, and the exact transcript moments to fix.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SECTION 6: BOOK A FREE 20-CALL AUDIT (CLOSE) -->
+    <section id="book-audit" class="section section-dark section-close">
+      <div class="wrap close-grid">
+        <div class="close-copy">
+          <p class="eyebrow eyebrow-gold">Free 20-Call Audit</p>
+          <h2>Book a free 20-call audit before your next release.</h2>
+          <p class="section-lead">
+            See what Gold Path catches on your live or staging agent. We run 20 scripted calls and send back a one-page ship or don't-ship report within 48 hours.
+          </p>
+
+          <div class="contact-note">
+            <p class="contact-direct">
+              Prefer email? Write to <a class="inline-link" href="mailto:audit@goldpath.example?subject=Free%2020-call%20audit%20request">audit@goldpath.example</a>.
+            </p>
+            <p class="placeholder-notice">
+              Note: <code>audit@goldpath.example</code> is a placeholder address while the Gold Path inbox is being set up. Submitting this form opens your local email client with a prefilled draft.
+            </p>
+          </div>
+        </div>
+
+        <form id="audit-form" class="audit-form" novalidate>
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Alex Rivera">
+            <p class="field-error" id="err-name" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-email">Work email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="alex@company.example">
+            <p class="field-error" id="err-email" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-stack">Agent platform</label>
+            <select id="f-stack" name="stack">
+              <option value="Vapi">Vapi</option>
+              <option value="Retell">Retell</option>
+              <option value="Bland">Bland</option>
+              <option value="LiveKit">LiveKit</option>
+              <option value="In-house">In-house</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="f-change">What are you testing or changing?</label>
+            <textarea id="f-change" name="change" rows="3" placeholder="Example: Swapping to a new voice model before rolling out to 500 daily support calls."></textarea>
+          </div>
+
+          <button class="btn btn-primary btn-full" type="submit">Book a free 20-call audit</button>
+          <p class="form-status" id="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">Gold Path</span>
+        <span class="footer-tagline">Independent QA for AI voice and chat agents.</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#why-independent">Why Independent QA</a>
+        <a href="#scenarios">What We Test</a>
+        <a href="#services">Services</a>
+        <a href="#book-audit">Free 20-call audit</a>
+      </nav>
+      <p class="footer-meta">Placeholder contact: audit@goldpath.example &middot; No third-party photography used.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
