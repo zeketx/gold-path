@@ -80,26 +80,42 @@
     });
   });
 
-  // 5. Audit request form -> mailto:audit@goldpath.example
+  // 5. Audit request form -> Netlify Forms (AJAX, inline thank-you)
   const form = document.getElementById('audit-form');
+  const thanksEl = document.getElementById('audit-thanks');
   if (form) {
     const nameInput = document.getElementById('f-name');
     const emailInput = document.getElementById('f-email');
-    const stackInput = document.getElementById('f-stack');
-    const changeInput = document.getElementById('f-change');
+    const platformInput = document.getElementById('f-platform');
     const errName = document.getElementById('err-name');
     const errEmail = document.getElementById('err-email');
+    const errPlatform = document.getElementById('err-platform');
     const statusEl = document.getElementById('form-status');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    const encode = (data) =>
+      new URLSearchParams(data).toString();
+
+    const showThanks = () => {
+      form.classList.add('is-hidden');
+      if (thanksEl) {
+        thanksEl.hidden = false;
+        thanksEl.setAttribute('tabindex', '-1');
+        thanksEl.focus();
+      }
+    };
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       errName.textContent = '';
       errEmail.textContent = '';
-      statusEl.textContent = '';
+      if (errPlatform) errPlatform.textContent = '';
+      if (statusEl) statusEl.textContent = '';
 
       let valid = true;
       const name = nameInput.value.trim();
       const email = emailInput.value.trim();
+      const platform = platformInput ? platformInput.value : '';
 
       if (!name) {
         errName.textContent = 'Enter your name.';
@@ -111,25 +127,45 @@
         valid = false;
       }
 
+      if (platformInput && !platform) {
+        if (errPlatform) errPlatform.textContent = 'Select a platform.';
+        valid = false;
+      }
+
       if (!valid) {
         if (!name) nameInput.focus();
-        else emailInput.focus();
+        else if (!email || errEmail.textContent) emailInput.focus();
+        else if (platformInput) platformInput.focus();
         return;
       }
 
-      const stack = stackInput.value;
-      const change = changeInput.value.trim() || 'Not specified';
-      const subject = `Free 20-call audit request — ${name} (${stack})`;
-      const body = [
-        `Name: ${name}`,
-        `Work email: ${email}`,
-        `Agent platform: ${stack}`,
-        `What we are testing or changing: ${change}`
-      ].join('\n');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
 
-      const mailtoUrl = `mailto:audit@goldpath.example?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      statusEl.textContent = 'Opening your email client to send a draft to audit@goldpath.example (placeholder inbox).';
-      window.location.href = mailtoUrl;
+      const payload = new FormData(form);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode(payload)
+      })
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error('Request failed');
+          }
+          showThanks();
+        })
+        .catch(() => {
+          if (statusEl) {
+            statusEl.textContent = 'We could not send the form from this page. Try again, or use the thank-you page path.';
+          }
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Book a free 20-call audit';
+          }
+        });
     });
   }
 })();

@@ -102,7 +102,7 @@
             <div class="report-header">
               <div>
                 <span class="report-kicker">GOLD PATH — SHIP CHECK REPORT</span>
-                <div class="report-meta">Candidate: prompt-v14.2 &rarr; gpt-4o-realtime</div>
+                <div class="report-meta">Candidate: prompt-v14.2 &rarr; new voice model</div>
               </div>
               <span class="verdict verdict-hold">DON'T SHIP</span>
             </div>
@@ -165,6 +165,28 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+
+    <!-- WORKS WITH: official vendor wordmarks -->
+    <section class="works-with" aria-label="Works with">
+      <div class="wrap works-with-inner">
+        <p class="works-with-label">Works with</p>
+        <ul class="works-with-logos">
+          <li>
+            <span class="ww-logo ww-vapi" role="img" aria-label="Vapi"></span>
+          </li>
+          <li>
+            <span class="ww-logo ww-retell" role="img" aria-label="Retell AI"></span>
+          </li>
+          <li>
+            <span class="ww-logo ww-bland" role="img" aria-label="Bland AI"></span>
+          </li>
+          <li>
+            <span class="ww-logo ww-livekit" role="img" aria-label="LiveKit"></span>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -448,48 +470,61 @@
             See what Gold Path catches on your live or staging agent. We run 20 scripted calls and send back a one-page ship or don't-ship report within 48 hours.
           </p>
 
-          <div class="contact-note">
-            <p class="contact-direct">
-              Prefer email? Write to <a class="inline-link" href="mailto:audit@goldpath.example?subject=Free%2020-call%20audit%20request">audit@goldpath.example</a>.
-            </p>
-            <p class="placeholder-notice">
-              Note: <code>audit@goldpath.example</code> is a placeholder address while the Gold Path inbox is being set up. Submitting this form opens your local email client with a prefilled draft.
-            </p>
-          </div>
         </div>
 
-        <form id="audit-form" class="audit-form" novalidate>
-          <div class="field">
-            <label for="f-name">Your name</label>
-            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Alex Rivera">
-            <p class="field-error" id="err-name" aria-live="polite"></p>
-          </div>
+        <div class="audit-form-panel">
+          <form id="audit-form" class="audit-form" name="audit" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="audit">
+            <p class="hp">
+              <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
 
-          <div class="field">
-            <label for="f-email">Work email</label>
-            <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="alex@company.example">
-            <p class="field-error" id="err-email" aria-live="polite"></p>
-          </div>
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Alex Rivera">
+              <p class="field-error" id="err-name" aria-live="polite"></p>
+            </div>
 
-          <div class="field">
-            <label for="f-stack">Agent platform</label>
-            <select id="f-stack" name="stack">
-              <option value="Vapi">Vapi</option>
-              <option value="Retell">Retell</option>
-              <option value="Bland">Bland</option>
-              <option value="LiveKit">LiveKit</option>
-              <option value="In-house">In-house</option>
-            </select>
-          </div>
+            <div class="field">
+              <label for="f-email">Work email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="alex@company.example">
+              <p class="field-error" id="err-email" aria-live="polite"></p>
+            </div>
 
-          <div class="field">
-            <label for="f-change">What are you testing or changing?</label>
-            <textarea id="f-change" name="change" rows="3" placeholder="Example: Swapping to a new voice model before rolling out to 500 daily support calls."></textarea>
-          </div>
+            <div class="field">
+              <label for="f-company">Company</label>
+              <input id="f-company" name="company" type="text" autocomplete="organization" placeholder="Acme Support">
+            </div>
 
-          <button class="btn btn-primary btn-full" type="submit">Book a free 20-call audit</button>
-          <p class="form-status" id="form-status" aria-live="polite"></p>
-        </form>
+            <div class="field">
+              <label for="f-platform">Platform</label>
+              <select id="f-platform" name="platform" required>
+                <option value="" disabled selected>Select a platform</option>
+                <option value="Vapi">Vapi</option>
+                <option value="Retell">Retell</option>
+                <option value="Bland">Bland</option>
+                <option value="LiveKit">LiveKit</option>
+                <option value="In-house">In-house</option>
+                <option value="Other">Other</option>
+              </select>
+              <p class="field-error" id="err-platform" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-notes">Notes</label>
+              <textarea id="f-notes" name="notes" rows="3" placeholder="Example: Swapping to a new TTS voice before rolling out to 500 daily support calls."></textarea>
+            </div>
+
+            <button class="btn btn-primary btn-full" type="submit">Book a free 20-call audit</button>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </form>
+
+          <div id="audit-thanks" class="audit-thanks" hidden>
+            <p class="thanks-kicker">Request received</p>
+            <h3>Thanks — we got your audit request.</h3>
+            <p>We’ll follow up within one business day about the free 20-call audit.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -506,7 +541,7 @@
         <a href="#services">Services</a>
         <a href="#book-audit">Free 20-call audit</a>
       </nav>
-      <p class="footer-meta">Placeholder contact: audit@goldpath.example &middot; No third-party photography used.</p>
+      <p class="footer-meta">No third-party photography used.</p>
     </div>
   </footer>
 
