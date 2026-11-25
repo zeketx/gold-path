@@ -101,7 +101,7 @@
           <div class="report-card" role="region" aria-label="Example one-page ship or don't-ship report">
             <div class="report-header">
               <div>
-                <span class="report-kicker">GOLD PATH — SHIP CHECK REPORT</span>
+                <span class="report-kicker"><span class="live-dot" aria-hidden="true"></span>GOLD PATH — SHIP CHECK REPORT</span>
                 <div class="report-meta">Candidate: prompt-v14.2 &rarr; new voice model</div>
               </div>
               <span class="verdict verdict-hold">DON'T SHIP</span>
@@ -206,54 +206,79 @@
             <div class="stack-list">
               <span class="stack-label">Works with any stack</span>
               <ul class="stack-pills" aria-label="Supported agent platforms">
-                <li>Vapi</li>
-                <li>Retell</li>
-                <li>Bland</li>
-                <li>LiveKit</li>
-                <li>In-house</li>
+                <li>
+                  <img class="stack-icon" src="assets/icons/vapi.png" alt="" width="18" height="18" loading="lazy">
+                  <span>Vapi</span>
+                </li>
+                <li>
+                  <img class="stack-icon" src="assets/icons/retell.png" alt="" width="18" height="18" loading="lazy">
+                  <span>Retell</span>
+                </li>
+                <li>
+                  <img class="stack-icon" src="assets/icons/bland.png" alt="" width="18" height="18" loading="lazy">
+                  <span>Bland</span>
+                </li>
+                <li>
+                  <img class="stack-icon" src="assets/icons/livekit.png" alt="" width="18" height="18" loading="lazy">
+                  <span>LiveKit</span>
+                </li>
+                <li>
+                  <svg class="stack-icon stack-icon-svg" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <rect x="1.5" y="2.5" width="15" height="13" rx="2.5" stroke="currentColor" stroke-width="1.4"/>
+                    <path d="M5 7L7.5 9L5 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.5 11H13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                  </svg>
+                  <span>In-house</span>
+                </li>
               </ul>
             </div>
           </div>
 
           <div class="diagram-panel" aria-label="Independent QA workflow diagram">
-            <svg class="qa-diagram" viewBox="0 0 560 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing your agent stack feeding into Gold Path Independent Grader and outputting a 48-hour Ship or Don't-Ship Report">
+            <svg class="qa-diagram" viewBox="0 0 660 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing your agent stack feeding into Gold Path Independent Grader and outputting a 48-hour Ship or Don't-Ship Report">
               <!-- Left column: Inputs -->
-              <rect x="16" y="28" width="152" height="54" rx="8" fill="#FFFFFF" stroke="#DDD8CC" stroke-width="1.5"/>
-              <text x="32" y="51" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600">Prompt change</text>
-              <text x="32" y="68" fill="#4A4945" font-family="JetBrains Mono, monospace" font-size="10.5">system / tools / rules</text>
+              <rect x="16" y="26" width="188" height="58" rx="8" fill="#FFFFFF" stroke="#DDD8CC" stroke-width="1.5"/>
+              <text x="32" y="50" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="13.5" font-weight="600">Prompt change</text>
+              <text x="32" y="69" fill="#4A4945" font-family="JetBrains Mono, monospace" font-size="10">system / tools / rules</text>
 
-              <rect x="16" y="133" width="152" height="54" rx="8" fill="#FFFFFF" stroke="#DDD8CC" stroke-width="1.5"/>
-              <text x="32" y="156" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600">Model swap</text>
-              <text x="32" y="173" fill="#4A4945" font-family="JetBrains Mono, monospace" font-size="10.5">LLM / voice / STT</text>
+              <rect x="16" y="131" width="188" height="58" rx="8" fill="#FFFFFF" stroke="#DDD8CC" stroke-width="1.5"/>
+              <text x="32" y="155" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="13.5" font-weight="600">Model swap</text>
+              <text x="32" y="174" fill="#4A4945" font-family="JetBrains Mono, monospace" font-size="10">LLM / voice / STT</text>
 
-              <rect x="16" y="238" width="152" height="54" rx="8" fill="#FFFFFF" stroke="#DDD8CC" stroke-width="1.5"/>
-              <text x="32" y="261" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600">Live transcripts</text>
-              <text x="32" y="278" fill="#4A4945" font-family="JetBrains Mono, monospace" font-size="10.5">production calls</text>
+              <rect x="16" y="236" width="188" height="58" rx="8" fill="#FFFFFF" stroke="#DDD8CC" stroke-width="1.5"/>
+              <text x="32" y="260" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="13.5" font-weight="600">Live transcripts</text>
+              <text x="32" y="279" fill="#4A4945" font-family="JetBrains Mono, monospace" font-size="10">production calls</text>
 
               <!-- Connecting lines left to hub -->
-              <path d="M168 55 H204 V160 H224" stroke="#9A6F00" stroke-width="1.5"/>
-              <path d="M168 160 H224" stroke="#9A6F00" stroke-width="1.5"/>
-              <path d="M168 265 H204 V160" stroke="#9A6F00" stroke-width="1.5"/>
+              <path d="M204 55 H228 V160 H252" stroke="#D1C7B2" stroke-width="1.5"/>
+              <path d="M204 160 H252" stroke="#D1C7B2" stroke-width="1.5"/>
+              <path d="M204 265 H228 V160" stroke="#D1C7B2" stroke-width="1.5"/>
+
+              <!-- Subtle animated signal pulses -->
+              <path class="diagram-pulse" d="M204 55 H228 V160 H252" stroke="#9A6F00" stroke-width="1.75" stroke-linecap="round"/>
+              <path class="diagram-pulse diagram-pulse-2" d="M204 160 H252" stroke="#9A6F00" stroke-width="1.75" stroke-linecap="round"/>
+              <path class="diagram-pulse diagram-pulse-3" d="M204 265 H228 V160 H252" stroke="#9A6F00" stroke-width="1.75" stroke-linecap="round"/>
 
               <!-- Center hub: Gold Path -->
-              <rect x="224" y="96" width="144" height="128" rx="10" fill="#141413"/>
-              <rect x="236" y="110" width="8" height="8" rx="2" fill="#E5B53B"/>
-              <text x="252" y="118" fill="#E5B53B" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">GOLD PATH</text>
-              <text x="236" y="148" fill="#F7F5F0" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="600">Independent</text>
-              <text x="236" y="168" fill="#F7F5F0" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="600">Grader</text>
-              <text x="236" y="196" fill="#B8B4A8" font-family="JetBrains Mono, monospace" font-size="10">20–50 scripted calls</text>
-              <text x="236" y="211" fill="#B8B4A8" font-family="JetBrains Mono, monospace" font-size="10">+ production scoring</text>
+              <rect x="252" y="92" width="176" height="136" rx="10" fill="#141413"/>
+              <rect x="268" y="108" width="8" height="8" rx="2" fill="#E5B53B"/>
+              <text x="284" y="116" fill="#E5B53B" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">GOLD PATH</text>
+              <text x="268" y="148" fill="#F7F5F0" font-family="Space Grotesk, sans-serif" font-size="15.5" font-weight="600">Independent</text>
+              <text x="268" y="168" fill="#F7F5F0" font-family="Space Grotesk, sans-serif" font-size="15.5" font-weight="600">Grader</text>
+              <text x="268" y="196" fill="#B8B4A8" font-family="JetBrains Mono, monospace" font-size="10">20–50 scripted calls</text>
+              <text x="268" y="212" fill="#B8B4A8" font-family="JetBrains Mono, monospace" font-size="10">+ production scoring</text>
 
               <!-- Connecting line hub to right -->
-              <path d="M368 160 H402" stroke="#9A6F00" stroke-width="1.5"/>
-              <polygon points="402,155 412,160 402,165" fill="#9A6F00"/>
+              <path d="M428 160 H458" stroke="#D1C7B2" stroke-width="1.5"/>
+              <path class="diagram-pulse diagram-pulse-out" d="M428 160 H458" stroke="#9A6F00" stroke-width="1.75" stroke-linecap="round"/>
+              <polygon points="458,155 468,160 458,165" fill="#9A6F00"/>
 
               <!-- Right column: Output -->
-              <rect x="412" y="106" width="132" height="108" rx="8" fill="#FFFFFF" stroke="#141413" stroke-width="1.5"/>
-              <text x="426" y="132" fill="#9A6F00" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">48 HOURS</text>
-              <text x="426" y="156" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600">One-page</text>
-              <text x="426" y="174" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600">Ship / Don't-Ship</text>
-              <text x="426" y="196" fill="#4A4945" font-family="JetBrains Mono, monospace" font-size="10">pass / fail + fixes</text>
+              <rect x="468" y="102" width="176" height="116" rx="8" fill="#FFFFFF" stroke="#141413" stroke-width="1.5"/>
+              <text x="484" y="128" fill="#9A6F00" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">48 HOURS</text>
+              <text x="484" y="153" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="14.5" font-weight="600">One-page</text>
+              <text x="484" y="172" fill="#141413" font-family="Space Grotesk, sans-serif" font-size="14.5" font-weight="600">Ship / Don't-Ship</text>
+              <text x="484" y="196" fill="#4A4945" font-family="JetBrains Mono, monospace" font-size="10">pass / fail + fixes</text>
             </svg>
           </div>
         </div>
