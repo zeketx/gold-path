@@ -52,13 +52,20 @@ html {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
+  padding: 0;
   background: var(--bg);
   color: var(--ink);
   overflow-x: clip;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Skip link */
@@ -1154,12 +1161,20 @@ p {
   min-height: 1.2em;
 }
 
+main {
+  flex: 1 0 auto;
+}
+
 /* Footer — white band, column links, dithered path bleeding off the bottom */
 .site-footer {
   background: var(--surface);
   color: var(--ink);
+  margin: 0;
   padding: 0;
-  overflow: hidden;
+  flex-shrink: 0;
+  /* Paint 2px of brand gold past the footer so --bg cannot peek in the
+     subpixel remainder below a fractional-height last box. */
+  box-shadow: 0 2px 0 0 #9A6F00;
 }
 
 .footer-top {
@@ -1254,24 +1269,27 @@ p {
 }
 
 .footer-art {
-  position: relative;
+  display: block;
   width: 100%;
   height: clamp(200px, 36vw, 440px);
-  margin-top: clamp(20px, 4vw, 56px);
+  margin: clamp(20px, 4vw, 56px) 0 0;
+  padding: 0;
+  line-height: 0;
+  font-size: 0;
   pointer-events: none;
   overflow: hidden;
 }
 
 .footer-art img {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  display: block;
   width: 100%;
-  height: 125%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: bottom;
   object-fit: cover;
   object-position: center bottom;
-  display: block;
   user-select: none;
 }
 
